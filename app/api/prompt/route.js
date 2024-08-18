@@ -10,6 +10,8 @@ export const GET = async (req) => {
 
         const prompts = await Prompt.find({}).populate('creator')
 
+        console.log("prompts", prompts)
+
         // return new Response(JSON.stringify(prompts), {status: 200})
 
         const response = new Response(JSON.stringify(prompts), {status: 200})
@@ -23,6 +25,7 @@ export const GET = async (req) => {
         response.headers.set("Location", url.toString());
         return response
     } catch (error) {
-        return new Response(`Failed to fetch all prompts ${error}`, {status: 500})
+        console.log("Failed to fetch all prompts", error)
+        return new Response("Failed to fetch all prompts", {status: 500})
     }
 }
