@@ -40,6 +40,10 @@ const Feed = () => {
     fetchPosts()
   }, [])
 
+  const handleTagClick = () => {
+    
+  }
+
 
   const handleSearchChange = (e) => {
 
@@ -68,6 +72,7 @@ const Feed = () => {
 
       <PromptCardList
         data={posts}
+        handleTagClick={handleTagClick}
       />
     </section>
   )
