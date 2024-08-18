@@ -27,10 +27,7 @@ const Feed = () => {
   // define the fetchPosts function
   const fetchPosts = async () => {
     try {
-      // added the next and cache options to force a revalidation
-      const response = await fetch('/api/prompt', {
-        next: { revalidate: 10, cache: 'no-store' }
-      })
+      const response = await fetch('/api/prompt')
       const data = await response.json()
       setPosts(data)
 
