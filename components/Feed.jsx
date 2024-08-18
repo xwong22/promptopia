@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 
+
 import PromptCard from '@components/PromptCard'
 
 const PromptCardList = ({ data, handleTagClick }) => {
@@ -27,7 +28,9 @@ const Feed = () => {
   // define the fetchPosts function
   const fetchPosts = async () => {
     const response = await fetch('/api/prompt')
+    console.log("response", response)
     const data = await response.json()
+    console.log("data", data)
     setPosts(data)
   }
 
