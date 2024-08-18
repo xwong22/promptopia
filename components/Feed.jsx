@@ -26,14 +26,9 @@ const Feed = () => {
 
   // define the fetchPosts function
   const fetchPosts = async () => {
-    try {
-      const response = await fetch('/api/prompt')
-      const data = await response.json()
-      setPosts(data)
-
-    } catch (error) {
-      console.log("error:", error)
-    }
+    const response = await fetch('/api/prompt')
+    const data = await response.json()
+    setPosts(data)
   }
 
   useEffect(() => {
