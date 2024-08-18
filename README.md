@@ -1,3 +1,5 @@
+==This is part of the Next.js Full Course 2024 tutorial by JavaScript Mastery.==
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
