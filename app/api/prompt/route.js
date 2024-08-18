@@ -25,7 +25,7 @@ export const GET = async (req) => {
         response.headers.set("Location", url.toString());
         return response
     } catch (error) {
-        console.log("Failed to fetch all prompts", error)
+        console.log(error)
         return new Response("Failed to fetch all prompts", {status: 500})
     }
 }
