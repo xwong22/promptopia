@@ -27,7 +27,10 @@ const Feed = () => {
   // define the fetchPosts function
   const fetchPosts = async () => {
     try {
-      const response = await fetch('/api/prompt')
+      // added the next and cache options to force a revalidation
+      const response = await fetch('/api/prompt', {
+        next: { revalidate: 10, cache: 'no-store' }
+      })
       const data = await response.json()
       setPosts(data)
 
@@ -41,7 +44,7 @@ const Feed = () => {
   }, [])
 
   const handleTagClick = () => {
-    
+
   }
 
 
